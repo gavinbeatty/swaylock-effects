@@ -333,7 +333,7 @@ void render_frame(struct swaylock_surface *surface) {
 
 			/* Bottom */
 
-			cairo_set_font_size(cairo, arc_radius / 6.0f);
+			cairo_set_font_size(cairo, state->args.font_size > 0 ? state->args.font_size : (arc_radius / 6.0f));
 			cairo_text_extents(cairo, text_l2, &extents_l2);
 			cairo_font_extents(cairo, &fe_l2);
 			x_l2 = (buffer_width / 2) -
